@@ -41,7 +41,10 @@ public class MainActivity extends AppCompatActivity {
     public void submitData(View view) {
         String data= enterData_et.getText().toString();
         showData.setText(data);
-        saveDatatoSharedPreferece(data);
+        /**
+         * Commenting this line so that shared preference won t be called
+         */
+      //  saveDatatoSharedPreferece(data);
         hideKeyboard(view);
     }
     public void saveDatatoSharedPreferece(String data){
