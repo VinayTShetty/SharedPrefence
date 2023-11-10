@@ -9,6 +9,13 @@
     tools:context=".MainActivity"
     android:layout_margin="20dp">
 
+    <Switch
+        android:id="@+id/resetdata_sw"
+        android:text="Reset_data"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content">
+    </Switch>
+
     <EditText
         android:id="@+id/enterdata_tv"
         android:layout_width="match_parent"
