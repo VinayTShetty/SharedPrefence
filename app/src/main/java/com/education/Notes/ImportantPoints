@@ -1,0 +1,36 @@
+Link:- https://developer.android.com/training/data-storage/shared-preferences
+
+Important Points:-
+Shared Preferences is the way in which one can store and retrieve small amounts of primitive data as key/value pairs to a file on the device storage such as String, int, float, Boolean that make up your preferences in an XML file inside the app on the device storage.
+Shared Preferences are suitable for different situations. For example, when the user’s settings need to be saved or to store data that can be used in different activities within the app
+
+
+How to Create Shared Preferences?
+
+use the method
+ getSharedPreferences() method
+
+ Mode used to Store the Data
+
+ MODE_PUBLIC will make the file public which could be accessible by other applications on the device
+ MODE_PRIVATE keeps the files private and secures the user’s data.
+ MODE_APPEND is used while reading the data from the SP file.
+
+
+Steps used to Store Data in Shared Preference
+**********************************************
+
+1)Use the method getSharedPreferences("XYZ") to get SharedPreferences Object reference.
+2)Creating an Editor object to edit(write to the file)
+3)Storing the key and its value as the data fetched from edittext
+4)Once the changes have been made, we need to commit to apply those changes made
+
+Steps used to get the data
+**************************
+
+1)Use the method getSharedPreferences() to get SharedPreferences Object reference.
+SharedPreferences sh = getSharedPreferences("XYZ", MODE_APPEND);
+
+2)use the appropiate data type to get the data.
+String s1 = sh.getString("name", "");  // to get String
+int a = sh.getInt("age", 0); // to get int
